@@ -29,10 +29,20 @@
         "UL-Project"
       );
 
-      for(let date of data["UL-Date"]) {
-        const p = document.createElement("p");
-        p.innerText = date;
-        page.appendChild(p);
+      const ul = document.createElement("ul")
+      for (const row of collapsedRows){
+        sheet.createElement({
+          tag:  ul,
+          children: [
+            {tag: "li",
+          children: [
+              {tag: "h2", content: row["UL-Date"]},
+              {tag: "p", content: row["UL-Project"]},
+              {tag: "img", content:  row["UL-Images"]}
+          ]
+          }
+          ],
+        });
       }
     });
   </script>
