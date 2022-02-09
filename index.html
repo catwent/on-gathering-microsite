@@ -12,7 +12,7 @@
   <script>
     const sheetID = "1HdvK4OkNmQmpePDSal6_uMoUtN5NZ58R92lBQcePIFg";
     const sheet = new Sheets(sheetID);
-    sheet.then(function(data){
+    sheet.getMyData().then(function(data) {
       console.log(data);
     });
   </script>
