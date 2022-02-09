@@ -23,6 +23,12 @@
       description.innerText = data["Meta-Description"];
       page.appendChild(description);
 
+      const collapsedRows = sheet.collapseKeys(
+        "Ul-Date",
+        "UL-Images",
+        "UL-Project"
+      );
+
       for(let date of data["UL-Date"]) {
         const p = document.createElement("p");
         p.innerText = date;
