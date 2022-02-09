@@ -15,7 +15,9 @@
     const page = document.querySelector(".page");
     const sheet = new Sheets(sheetID);
     sheet.getMyData().then(function(data) {
-      console.log(data);
+      const title = document.createElement("h1");
+      title.innerText = data["Header-Title"];
+      page.appendChild(title);
     });
   </script>
 </html>
