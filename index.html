@@ -18,6 +18,10 @@
       const title = document.createElement("h1");
       title.innerText = data["Header-Title"];
       page.appendChild(title);
+
+      const description = document.createElement("p");
+      description.innerText = data["Meta-Description"];
+      page.appendChild(description);
     });
   </script>
 </html>
