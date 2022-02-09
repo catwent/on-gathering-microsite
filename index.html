@@ -29,25 +29,25 @@
         "UL-Project"
       );
 
-      const ul = document.createElement("ul")
       for (const row of collapsedRows){
         sheet.createElement({
           tag: "div",
           className: "project",
           children: [
-            {tag: "div",
-          children: [
-              {tag: "h2", content: row["UL-Date"]},
-              {tag: "p", content: row["UL-Project"]},
-              {
-                tag: "img",
-                attributes: {
-                  src: row["UL-Images"],
-                }
+            {
+              tag: "div",
+              children: [
+                {tag: "h2", content: row["UL-Date"]},
+                {tag: "p", content: row["UL-Project"]},
+                {
+                  tag: "img",
+                  attributes: {
+                    src: row["UL-Images"],
+                  },
               },
-          ]
-          }
           ],
+        },
+        ],
         });
       }
     });
