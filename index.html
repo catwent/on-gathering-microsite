@@ -38,7 +38,12 @@
           children: [
               {tag: "h2", content: row["UL-Date"]},
               {tag: "p", content: row["UL-Project"]},
-              {tag: "img", content:  row["UL-Images"]}
+              {
+                tag: "img",
+                attributes: {
+                  src: row["UL-Images"]
+                }
+              },
           ]
           }
           ],
