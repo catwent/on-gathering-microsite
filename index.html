@@ -22,6 +22,12 @@
       const description = document.createElement("p");
       description.innerText = data["Meta-Description"];
       page.appendChild(description);
+
+      for(let date of data["UL-Date"]) {
+        const p = document.createElement("p");
+        p.innerText = date;
+        page.appendChild(p);
+      }
     });
   </script>
 </html>
