@@ -8,9 +8,11 @@
     <script src="https://cdn.jsdelivr.net/gh/alvinashiatey/Sheets@latest/dist/sheets.umd.min.js"></script>
   </head>
   <body>
+      <div class="page"></div>
   </body>
   <script>
     const sheetID = "1F1nb0IVZg47Z79TuuugTdYKkwqkj8YZsdux7b0Ue8hY";
+    const page = document.querySelector(".page");
     const sheet = new Sheets(sheetID);
     sheet.getMyData().then(function(data) {
       console.log(data);
